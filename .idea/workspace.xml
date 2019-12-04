@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 01/problem.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 01/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 01/day01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 01/day01.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,27 @@
       <option name="presentableId" value="Default" />
       <updated>1575415636529</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added the original problem (day 1 and day 2) and the test and full input files">
+      <created>1575417863766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575417863767</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added a working version of Day 1.1 and the skeleton for Day 1.2">
+      <created>1575417922137</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575417922137</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added the original problem (day 1 and day 2) and the test and full input files" />
+    <MESSAGE value="Added a working version of Day 1.1 and the skeleton for Day 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a working version of Day 1.1 and the skeleton for Day 1.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="468" y="107" key="#Notifications" timestamp="1575416343882">
@@ -67,10 +87,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.839@0.23.1440.839" timestamp="1575416591426" />
-    <state x="565" y="61" key="CommitChangelistDialog2" timestamp="1575417863515">
+    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575417921920">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="565" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575417863515" />
+    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575417921920" />
     <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1575415725066">
       <screen x="0" y="23" width="1440" height="839" />
     </state>

@@ -33,6 +33,15 @@ for line in lines:
     total1 += mass
 
     # calculate the additional fuel needs for part 2
+    extra = mass
+
+    while extra > 0:
+        total2 += extra
+        extra = extra / 3
+        extra = round_down(extra)
+        extra = extra - 2
+
+
 
 # print the final result
 print(f"The part one fuel requirements are: {str(total1)}")
