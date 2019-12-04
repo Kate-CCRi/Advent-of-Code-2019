@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Day 03/day03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 02/Day2_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 02/Day2_Part2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575422837424</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Part 2 rewritten to be more pythonic, solution works">
+      <created>1575423736837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575423736837</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Day 03 folder, problem, test, and input data">
+      <created>1575423838852</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575423838852</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,7 +130,9 @@
     <MESSAGE value="Day 2.1 works" />
     <MESSAGE value="Added problem part 2" />
     <MESSAGE value="Set up new Part 2 file with code from Part 1 to start with" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up new Part 2 file with code from Part 1 to start with" />
+    <MESSAGE value="Part 2 rewritten to be more pythonic, solution works" />
+    <MESSAGE value="Day 03 folder, problem, test, and input data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 03 folder, problem, test, and input data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
@@ -131,10 +147,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.839@0.23.1440.839" timestamp="1575416591426" />
-    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575423736662">
+    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575423838691">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575423736662" />
+    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575423838691" />
     <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1575415725066">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
@@ -143,9 +159,9 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="756" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.839@0.23.1440.839" timestamp="1575422899631" />
-    <state x="638" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1575423068863">
+    <state x="638" y="186" width="670" height="676" key="search.everywhere.popup" timestamp="1575425967225">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="638" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.839@0.23.1440.839" timestamp="1575423068863" />
+    <state x="638" y="186" width="670" height="676" key="search.everywhere.popup/0.23.1440.839@0.23.1440.839" timestamp="1575425967225" />
   </component>
 </project>
