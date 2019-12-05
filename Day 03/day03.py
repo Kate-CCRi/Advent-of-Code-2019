@@ -16,8 +16,6 @@ line2_mover = []
 
 def mover(source_array, target_array):
 
-    print(source_array)
-    print(target_array)
     coords = [0, 0]
 
     for index in range(0, len(source_array)):
@@ -35,31 +33,21 @@ def mover(source_array, target_array):
 
         target_array += (coords)
 
-        print(coords)
-        print(target_array)
-
-
-
     return(target_array)
 
 line1_coords = mover(line1, line1_mover)
+print(line1_coords)
 line2_coords = mover(line2, line2_mover)
+print(line2_coords)
 
 potentials = []
 
-for index in line1_coords (0, len(line1_coords), 2):
-    for index in line2_coords (0, len(line2_coords), 2):
-        line1_x = line1[index]
-        line1_y = line1[index + 1]
-        line2_x = line2[index]
-        line2_y = line2[index + 1]
-
-        if line1_x == line2_x:
-            attempt = [[line1_x, line1_y], [line2_x, line2_y]]
-            potentials += attempt
-        elif line1_y == line2_y:
-            attempt = [[line1_x, line1_y], [line2_x, line2_y]]
-            potentials += attempt
+for index in range(0, len(line1_coords), 2):
+    for index in range(0, len(line2_coords), 2):
+        line1_x = line1_coords[index]
+        line1_y = line1_coords[index + 1]
+        line2_x = line2_coords[index]
+        line2_y = line2_coords[index + 1]
 
 print(potentials)
 

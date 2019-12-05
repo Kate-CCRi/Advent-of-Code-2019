@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 03/day03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day 03/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day 03/day03_take2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Advent-of-Code-2019.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Advent-of-Code-2019.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 03/day03.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 03/day03.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +34,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -119,10 +125,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575423838852</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken.">
+      <created>1575426435405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575426435405</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added the original problem (day 1 and day 2) and the test and full input files" />
     <MESSAGE value="Added a working version of Day 1.1 and the skeleton for Day 1.2" />
     <MESSAGE value="Day 1.2 works as well" />
@@ -132,7 +146,8 @@
     <MESSAGE value="Set up new Part 2 file with code from Part 1 to start with" />
     <MESSAGE value="Part 2 rewritten to be more pythonic, solution works" />
     <MESSAGE value="Day 03 folder, problem, test, and input data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 03 folder, problem, test, and input data" />
+    <MESSAGE value="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken." />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
@@ -143,18 +158,22 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="468" y="107" key="#Notifications/0.23.1440.839@0.23.1440.839" timestamp="1575416343882" />
-    <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575416591426">
+    <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575503878739">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.839@0.23.1440.839" timestamp="1575416591426" />
-    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575423838691">
+    <state x="595" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.839@0.23.1440.839" timestamp="1575503878739" />
+    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575426435234">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575423838691" />
-    <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1575415725066">
+    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575426435234" />
+    <state x="443" y="97" key="SettingsEditor" timestamp="1575505235891">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="397" y="275" key="com.intellij.ide.util.TipDialog/0.23.1440.839@0.23.1440.839" timestamp="1575415725066" />
+    <state x="443" y="97" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1575505235891" />
+    <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1575505373364">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="397" y="275" key="com.intellij.ide.util.TipDialog/0.23.1440.839@0.23.1440.839" timestamp="1575505373364" />
     <state x="756" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575422899631">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
