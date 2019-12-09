@@ -1,7 +1,3 @@
-# Import Shapely's line functions
-from shapely.geometry import LineString
-from shapely.geometry import Point
-
 # Open the input file, read it into the "data" variable, and clean it up
 f = open("input.txt", "r")
 data = f.read()
@@ -72,17 +68,63 @@ def make_coords(source_list, target_list):
 make_coords(line1_coords, line1_real)
 make_coords(line2_coords, line2_real)
 
-# Use Shapely's LineString function to make the lists of points into lines
-line1_actual = LineString(line1_real)
-line2_actual = LineString(line2_real)
+line1_all = []
+line2_all = []
 
-# Use Shapely's functions to determine what all the intersctions are
-x = line1_actual.intersection(line2_actual)
+def get_points(source_list, target_list):
 
-for item in x:
-    if item.geom_type = Point:
+    i_x = 0
+    i_y = 0
+
+    for point in source_list:
+        x = point[0]
+        y = point[1]
+
+        if x == i_x:
+            target_list.append(point)
+        elif x <= i_x:
+            while i_x >= x:
+                point_temp = [i_x, y]
+                target_list.append(point_temp)
+                i_x -= 1
+            else:
+                i_x = x
+        elif x >= i_x:
+            while i_x <= x:
+                point_temp = [i_x, y]
+                target_list.append(point_temp)
+                i_x += 1
+            else:
+                i_x = x
+
+        if y == i_y:
+            target_list.append(point)
+        elif y <= i_y:
+            while i_y >= y:
+                point_temp = [x, i_y]
+                target_list.append(point_temp)
+                i_y -= 1
+            else:
+                i_y = y
+        elif y >= i_y:
+            while i_y <= y:
+                point_temp = [x, i_y]
+                target_list.append(point_temp)
+                i_y += 1
+            else:
+                i_y = y
 
 
+get_points(line1_real, line1_all)
+get_points(line2_real, line2_all)
 
+intersections = [value for value in line1_all if value in line2_all]
 
+dist = []
 
+for point in intersections:
+    distance = abs(point[0]) + abs(point[1])
+    if distance > 0:
+        dist.append(distance)
+
+print(min(dist))
