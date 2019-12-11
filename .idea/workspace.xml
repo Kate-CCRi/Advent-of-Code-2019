@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 04/Day-04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 04/problem.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 04/Day-04.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 04/Day-04.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576027256071</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Start Day 4 with problem and skeleton code. (No input or test data for this one.)">
+      <created>1576073959612</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576073959612</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +202,8 @@
     <MESSAGE value="Day 03 folder, problem, test, and input data" />
     <MESSAGE value="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken." />
     <MESSAGE value="day03_part2 Let's see what happens." />
-    <option name="LAST_COMMIT_MESSAGE" value="day03_part2 Let's see what happens." />
+    <MESSAGE value="Start Day 4 with problem and skeleton code. (No input or test data for this one.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Day 4 with problem and skeleton code. (No input or test data for this one.)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
