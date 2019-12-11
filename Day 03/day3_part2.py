@@ -2,7 +2,7 @@
 import re
 
 # Open the input file, read it into the "data" variable, and clean it up
-f = open("test2.txt", "r")
+f = open("input.txt", "r")
 data = f.read()
 f.close()
 
@@ -16,21 +16,21 @@ line2 = sep[1].split(",")
 line1_moves = []
 line2_moves = []
 
+# Split up the input moves into letters and numbers and put it back into a list as a sub-list
 def distances(input_list, output_list):
     for item in input_list:
 
         things = re.split("(\d+)", item)
+         output_list.append([things[0], things[1]])
 
-        output_list.append([things[0], things[1]])
-
-
-
+# Run the "distances" code over line1 and line 2
 distances(line1, line1_moves)
 distances(line2, line2_moves)
 
 line1_points = []
 line2_points = []
 
+# Turn the moves into a list of points, including all the interstitial points to make the complete list of points in the line
 def init_points(input_list, output_list):
 
     x = 0
@@ -65,29 +65,42 @@ def init_points(input_list, output_list):
                 output_list.append([x, y])
                 i += 1
                 y -= 1
-    del(output_list[0])
 
+# Make the list of points for both lines
 init_points(line1_moves, line1_points)
 init_points(line2_moves, line2_points)
 
-steps = 0
+# Convert the list of points on the lines into sets
+line1_set = set([])
+line2_set = set([])
 
-"""
-In the long run, you really only need the first intersection -- that will by definition be the smallest number of steps - maybe start by finding that?
-"""
+def make_set(input_list, output_set):
+    for item in input_list:
+        temp = tuple(item)
+        output_set.add(temp)
 
+make_set(line1_points, line1_set)
+make_set(line2_points, line2_set)
 
-for item in line1_points:
-    if item in line2_points:
+# Get the intersections of the lines
+intersections = line1_set.intersection(line2_set)
 
-        dist1 = line1_points.index(item) + 1
-        dist2 = line2_points.index(item) + 1
+intersections_list = []
 
-        dist_tot = dist1 + dist2
+# Turn the set of intersections back into a list for easier manipulation
+def make_list(input_set, output_list):
+    for item in input_set:
+        if item == (0, 0):
+            next
+        else:
+            temp = list(item)
+            output_list.append(temp)
 
-        if steps == 0:
-            steps = dist_tot
-        elif dist_tot < steps:
-            steps = dist_tot
+make_list(intersections, intersections_list)
 
-print(steps)
+# For each intersection, pull the index out of the lists and add it, then print the lowest number
+def fewest_total_steps():
+    total_steps = [line1_points.index(i) + line2_points.index(i) for i in intersections_list]
+    print(min(total_steps))
+
+fewest_total_steps()
