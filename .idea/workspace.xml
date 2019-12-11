@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 03/day3_part2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 03/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575426435405</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="day03_part2 Let's see what happens.">
+      <created>1576027256071</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576027256071</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,7 +191,8 @@
     <MESSAGE value="Part 2 rewritten to be more pythonic, solution works" />
     <MESSAGE value="Day 03 folder, problem, test, and input data" />
     <MESSAGE value="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 03 code -- it calculates the coordinates correctly (I think), but doesn't return the right thing yet. The X/Y comparison code is broken." />
+    <MESSAGE value="day03_part2 Let's see what happens." />
+    <option name="LAST_COMMIT_MESSAGE" value="day03_part2 Let's see what happens." />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
@@ -211,10 +215,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="466" y="266" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.839@0.23.1440.839" timestamp="1575547097646" />
-    <state x="556" y="61" key="CommitChangelistDialog2" timestamp="1575426435234">
+    <state x="122" y="61" key="CommitChangelistDialog2" timestamp="1576027255863">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
-    <state x="556" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1575426435234" />
+    <state x="122" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1576027255863" />
     <state x="198" y="123" width="1053" height="599" key="DiffContextDialog" timestamp="1576020329433">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
