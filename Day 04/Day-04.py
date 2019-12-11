@@ -1,3 +1,6 @@
+# Import itertools for use in Part 2
+import itertools
+
 # Since there are only two numbers in the input, I'll just hard-code them instead of importing from a file
 input1 = 156218
 input2 = 652527
@@ -23,6 +26,7 @@ for number in range(input1, input2):
             break
 
 count = 0
+part1_pass = []
 
 # For each index in the list of numbers containing doubles
 for index in range(0, len(num_doubles)):
@@ -46,8 +50,32 @@ for index in range(0, len(num_doubles)):
         # If all five comparisons are correct, add one to the count
         if temp_count == 5:
             count += 1
+            part1_pass.append(num)
 
-print(count)
+print(f"The Part 1 answer is {count}.")
+
+part2_list = []
+
+for index in range(0, len(part1_pass)):
+
+    num = part1_pass[index]
+    num_list = [int(d) for d in str(num)]
+
+    sorted_nums = sorted(num_list)
+
+    for index in range(0, len(sorted_nums)):
+
+        if sorted_nums.count(sorted_nums[index]) == 2:
+            part2_list.append(num)
+            break
+        else:
+            next
+
+print(part2_list)
+print(len(part2_list))
+
+
+
 
 
 
