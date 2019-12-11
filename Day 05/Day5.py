@@ -2,7 +2,7 @@
 import array
 
 # Open the input file, read it into the "data" variable, and clean it up
-f = open("input.txt", "r")
+f = open("test.txt", "r")
 data = f.read()
 f.close()
 
@@ -12,12 +12,41 @@ nums = data.split(",")
 # Convert each item into a integer
 
 nums = list(map(int, nums))
+step = 1
 
-# Update the values in the array to what the problem asks for
+for index in range(0, len(nums), step):
 
-nums[1] = 12
-nums[2] = 2
+    if len(str(nums[index])) == 1:
+        # Do the one-code operations
+        print(nums[index])
+        step = 1
+    else:
+        item = [int(char) for char in str(nums[index])]
 
+        if item[0] == 0:
+            item.reverse()
+        else:
+            item.insert(0, 0)
+            item.reverse()
+
+        opcode = [item[1]]
+        param1_mode = item[2]
+        param2_mode = item[3]
+        param3_mode = item[4]
+
+        if opcode == 9:
+            print("I hit an exit code!")
+            break
+        if param3_mode == 1:
+            print("I hit a bad parameter!")
+            break
+
+
+
+        print(item)
+        step = len(item)
+
+"""
 def process_array(nums):
 
     # The working array "arr" is all of "nums" from start to finish
@@ -36,3 +65,4 @@ def process_array(nums):
             arr[arr[index+3]] = numberA * numberB
 
     return arr[0]
+"""
