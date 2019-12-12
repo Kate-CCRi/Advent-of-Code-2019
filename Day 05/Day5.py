@@ -35,11 +35,19 @@ def opcode_computer(input_list):
     # A variable to hold the index that we're working on so we can increment it later
     current_index = 0
 
+    # Returns the opcode
     opcode = get_opcodes(input_list[current_index])
-    data = get_data(opcode, input_list)
 
-    # TODO: Write the opcode processor (depends on get_data, opcode_processor)
+    # Returns the 3 parameters (1 and 2 will be data, 3 will be the storage location of the data)
+    data = get_data(opcode, current_index, input_list)
 
+    processed = opcode_processor(opcode, data, input_index, input_list)
+
+    # TODO: Figure out what the return needs to be
+
+    # Update the index to the next point you need to look at
+    current_index += len(opcode)
+    current_index += len(data)
 
 
 def get_opcodes(input):
@@ -83,12 +91,13 @@ def get_opcodes(input):
             item.reverse()
             return item
 
-def get_data(input_opcode, input_list):
+def get_data(input_opcode, input_index, input_list):
     """
     Using a given opcode, get the data for processing based on what the opcode says
 
     Parameters:
         input_opcode: An opcode that specifies what parameters to get
+        input_index: The index in the input list from which the opcode came
         input_list: The list from which the parameters for processing will come from
 
     Returns:
@@ -97,16 +106,48 @@ def get_data(input_opcode, input_list):
         param2: The second piece of data to be processed
         param3: The location in the list where the result of the processing should be stored
     """
-    # TODO: Write the data-getting function
 
-def opcode_processor(opcode, data, index, input_list):
+    if input_opcode == 99:
+        break
+
+    elif len(input_opcode) == 1:
+        param1 = input_list[input_index + 1]
+        param2 = input_list[input_index + 2]
+        param3 = input_list[input_index + 3]
+
+    else:
+
+        if input_opcode[1] == 9:
+            break
+
+        if input_opcode[2] == 0:
+            param1 = input_list[input_list[input_index + 1]]
+        else:
+            param1 = input_list[input_index + 1]
+
+        if input_opcode[3] == 0:
+            param2 = input_list[input_list[input_index + 1]]
+        else:
+            param2 = input_list[input_index + 1]
+
+        if input_opcode[4] == 0:
+            param3 = input_list[input_list[input_index + 1]]
+        else:
+            param3 = input_list[input_index + 1]
+
+    data = [param1, param2, param3]
+
+    return data
+
+
+def opcode_processor(opcode, data, input_index, input_list):
     """
     Processes incoming opcodes and data and returns the appropriate values.
 
     Parameters:
          opcode: The opcode that specifies the operation to be performed
          data: The supporting data for the opcode operation
-         index: The starting index of the opcode
+         input_index: The starting index of the opcode
          input_list: The starting input list of opcodes and data
 
     Returns:
