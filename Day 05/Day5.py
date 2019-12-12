@@ -2,7 +2,7 @@
 import array
 
 # Open the input file, read it into the "data" variable, and clean it up
-f = open("test.txt", "r")
+f = open("input.txt", "r")
 data = f.read()
 f.close()
 
@@ -10,8 +10,35 @@ f.close()
 nums = data.split(",")
 
 # Convert each item into a integer/list
-
 nums = list(map(int, nums))
+
+def opcode_computer(input_list):
+    """
+    The code that actually makes up the opcode computer.
+
+    Parameter:
+    The list of instructions and data to be processed by the opcode computer.
+
+    Return:
+    The "diagnostic code" represented by the return value.
+
+    What it does:
+        * Takes a list of instructions and data as input
+        * Recursively:
+            * Retrieves the opcode from the current index and stores it as a variable
+            * Retrieves the data for that opcode and stores it as a list
+            * Runs the appropriate processing for the opcode on the data retrieved
+            * Stores the resulting value in the appropriate place
+            * Increments the index to the next opcode value
+            * Breaks and returns if it finds a "stop" code (opcode 99)
+    """
+    # A variable to hold the index that we're working on so we can increment it later
+    current_index = 0
+
+    opcode = get_opcodes(input_list[current_index])
+    data = get_data(opcode, input_list)
+
+    # TODO: Write the opcode processor (depends on get_data, opcode_processor)
 
 
 
@@ -70,7 +97,23 @@ def get_data(input_opcode, input_list):
         param2: The second piece of data to be processed
         param3: The location in the list where the result of the processing should be stored
     """
-    # This won't work because you don't have anything storing the index of the original opcode... Update the get_opcode function?
+    # TODO: Write the data-getting function
+
+def opcode_processor(opcode, data, index, input_list):
+    """
+    Processes incoming opcodes and data and returns the appropriate values.
+
+    Parameters:
+         opcode: The opcode that specifies the operation to be performed
+         data: The supporting data for the opcode operation
+         index: The starting index of the opcode
+         input_list: The starting input list of opcodes and data
+
+    Returns:
+        index: The updated index for the next opcode
+        output_list: The updated list after the opcode process has happened
+    """
+    # TODO: Write the opcode process runner
 
 """
 def process_array(nums):
