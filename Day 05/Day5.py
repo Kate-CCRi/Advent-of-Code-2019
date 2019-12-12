@@ -9,42 +9,68 @@ f.close()
 # Split the input data into a list
 nums = data.split(",")
 
-# Convert each item into a integer
+# Convert each item into a integer/list
 
 nums = list(map(int, nums))
-step = 1
 
-for index in range(0, len(nums), step):
 
-    if len(str(nums[index])) == 1:
-        # Do the one-code operations
-        print(nums[index])
-        step = 1
-    else:
-        item = [int(char) for char in str(nums[index])]
 
-        if item[0] == 0:
+def get_opcodes(input):
+    """
+    Process opcodes to get useful output.
+
+    Parameters:
+    an item from the input list
+
+    Returns:
+    a properly formatted opcode (including positions if applicable)
+
+    What it does:
+        * Takes an input
+        * Checks the length to see if this is a one-digit code or a multi-digit code
+        * If a one-digit code, returns it immediately
+        * If a multi-digit code:
+            * Adds 0 as necessary to bring it up to five characters
+            * Reverses it to put the opcode first and the parameter codes second
+            * Returns the reversed item
+    """
+
+    # If the opcode is one character long, return it immediately for processing
+    if len(str(input)) == 1:
+        return input
+
+    # If the opcode is more than one character long, turn it into something that can be processed
+    if len(str(input)) > 1:
+
+        # Turn the input into a list of individual digits
+        item = [int(char) for char in str(input)]
+
+        # If all five positions are specified, reverse it (to put the opcode first) and return it
+        if len(item) == 5:
             item.reverse()
+            return item
+        # Otherwise, put in zeroes until it does specify all five positions, then reverse and return it
         else:
-            item.insert(0, 0)
+            for i in range(5-len(item)):
+                item.insert(0, 0)
             item.reverse()
+            return item
 
-        opcode = [item[1]]
-        param1_mode = item[2]
-        param2_mode = item[3]
-        param3_mode = item[4]
+def get_data(input_opcode, input_list):
+    """
+    Using a given opcode, get the data for processing based on what the opcode says
 
-        if opcode == 9:
-            print("I hit an exit code!")
-            break
-        if param3_mode == 1:
-            print("I hit a bad parameter!")
-            break
+    Parameters:
+        input_opcode: An opcode that specifies what parameters to get
+        input_list: The list from which the parameters for processing will come from
 
-
-
-        print(item)
-        step = len(item)
+    Returns:
+        opcode: The opcode that specifies what to do with the data
+        param1: The first piece of data to be processed
+        param2: The second piece of data to be processed
+        param3: The location in the list where the result of the processing should be stored
+    """
+    # This won't work because you don't have anything storing the index of the original opcode... Update the get_opcode function?
 
 """
 def process_array(nums):
