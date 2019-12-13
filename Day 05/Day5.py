@@ -15,43 +15,6 @@ nums = list(map(int, nums))
 # A variable to hold the index that we're working on so we can increment it later
 current_index = 0
 
-def opcode_computer(input_list):
-    """
-    The code that actually makes up the opcode computer.
-
-    Parameter:
-    The list of instructions and data to be processed by the opcode computer.
-
-    Return:
-    The "diagnostic code" represented by the return value.
-
-    What it does:
-        * Takes a list of instructions and data as input
-        * Recursively:
-            * Retrieves the opcode from the current index and stores it as a variable
-            * Retrieves the data for that opcode and stores it as a list
-            * Runs the appropriate processing for the opcode on the data retrieved
-            * Stores the resulting value in the appropriate place
-            * Increments the index to the next opcode value
-            * Breaks and returns if it finds a "stop" code (opcode 99)
-    """
-
-
-    # Returns the opcode
-    opcode = get_opcodes(input_list[current_index])
-
-    # Returns the 3 parameters (1 and 2 will be data, 3 will be the storage location of the data)
-    data = get_data(opcode, current_index, input_list)
-
-    processed = opcode_processor(opcode, data, current_index, input_list)
-
-    # TODO: Figure out what the return needs to be
-
-    # Update the index to the next point you need to look at
-    current_index += len(opcode)
-    current_index += len(data)
-
-
 def get_opcodes(input):
     """
     Process opcodes to get useful output.
@@ -110,34 +73,39 @@ def get_data(input_opcode, input_index, input_list):
     """
 
     if input_opcode == 99:
-        break
+        return("The data getter found a break code.")
 
-    elif len(input_opcode) == 1:
-        param1 = input_list[input_index + 1]
-        param2 = input_list[input_index + 2]
-        param3 = input_list[input_index + 3]
+    elif len(str(input_opcode)) == 1:
+        if input_opcode == 1 or input_opcode == 2:
+            param1 = input_list[input_index + 1]
+            param2 = input_list[input_index + 2]
+            param3 = input_list[input_index + 3]
+            data = [param1, param2, param3]
+        else:
+            param1 = input_list[input_index + 1]
+            data = [param1]
 
     else:
 
         if input_opcode[1] == 9:
-            break
-
-        if input_opcode[2] == 0:
-            param1 = input_list[input_list[input_index + 1]]
+            return("The data getter found a break code.")
         else:
-            param1 = input_list[input_index + 1]
+            if input_opcode[2] == 0:
+                param1 = input_list[input_list[input_index + 1]]
+            else:
+                param1 = input_list[input_index + 1]
 
-        if input_opcode[3] == 0:
-            param2 = input_list[input_list[input_index + 1]]
-        else:
-            param2 = input_list[input_index + 1]
+            if input_opcode[3] == 0:
+                param2 = input_list[input_list[input_index + 1]]
+            else:
+                param2 = input_list[input_index + 1]
 
-        if input_opcode[4] == 0:
-            param3 = input_list[input_list[input_index + 1]]
-        else:
-            param3 = input_list[input_index + 1]
+            if input_opcode[4] == 0:
+                param3 = input_list[input_list[input_index + 1]]
+            else:
+                param3 = input_list[input_index + 1]
 
-    data = [param1, param2, param3]
+            data = [param1, param2, param3]
 
     return data
 
@@ -156,9 +124,10 @@ def opcode_processor(opcode, data, input_index, input_list):
         index: The updated index for the next opcode
         output_list: The updated list after the opcode process has happened
     """
+
     # Break if the code is 99 (or 9, if it was a multi-digit opcode):
     if opcode == 99 or opcode == 9:
-        break
+        return("The opcode processor found a break code.")
 
     if opcode == 1:
         input_list[data[3]] == data[1] + data[2]
@@ -168,25 +137,46 @@ def opcode_processor(opcode, data, input_index, input_list):
 
     if opcode == 3:
         val = input("Enter your value: ")
-        # TODO: Figure out what goes here...
+        input_list[data[1]] = val
 
-"""
-def process_array(nums):
+    if opcode == 4:
+        return input_data[data[1]]
 
-    # The working array "arr" is all of "nums" from start to finish
-    arr = nums[:]
+def opcode_computer(input_list):
+    """
+    The code that actually makes up the opcode computer.
 
-   # Iterate over the working array by 4s:
-    for index in range(0, len(arr), 4):
-        operator = arr[index]
-        numberA = arr[arr[index+1]]
-        numberB = arr[arr[index+2]]
-        if operator == 99:
-            return arr[0]
-        elif operator == 1:
-            arr[arr[index+3]] = numberA + numberB
-        elif operator == 2:
-            arr[arr[index+3]] = numberA * numberB
+    Parameter:
+    The list of instructions and data to be processed by the opcode computer.
 
-    return arr[0]
-"""
+    Return:
+    The "diagnostic code" represented by the return value.
+
+    What it does:
+        * Takes a list of instructions and data as input
+        * Recursively:
+            * Retrieves the opcode from the current index and stores it as a variable
+            * Retrieves the data for that opcode and stores it as a list
+            * Runs the appropriate processing for the opcode on the data retrieved
+            * Stores the resulting value in the appropriate place
+            * Increments the index to the next opcode value
+            * Breaks and returns if it finds a "stop" code (opcode 99)
+    """
+
+
+    for current_index in range(0, len(input_list)):
+        # Returns the opcode
+        opcode = get_opcodes(input_list[current_index])
+
+        # Returns the 3 parameters (1 and 2 will be data, 3 will be the storage location of the data)
+        data = get_data(opcode, current_index, input_list)
+
+        processed = opcode_processor(opcode, data, current_index, input_list)
+
+        return processed
+
+        # Update the index to the next point you need to look at
+        current_index += len(opcode)
+        current_index += len(data)
+
+opcode_computer(nums)
