@@ -156,7 +156,19 @@ def opcode_processor(opcode, data, input_index, input_list):
         index: The updated index for the next opcode
         output_list: The updated list after the opcode process has happened
     """
-    # TODO: Write the opcode process runner
+    # Break if the code is 99 (or 9, if it was a multi-digit opcode):
+    if opcode == 99 or opcode == 9:
+        break
+
+    if opcode == 1:
+        input_list[data[3]] == data[1] + data[2]
+
+    if opcode == 2:
+        input_list[data[3]] == data[1] * data[2]
+
+    if opcode == 3:
+        val = input("Enter your value: ")
+        # TODO: Figure out what goes here...
 
 """
 def process_array(nums):
