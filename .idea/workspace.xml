@@ -185,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576159740188</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated get_data with actual code.">
+      <created>1576178600200</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576178600200</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +258,8 @@
     <MESSAGE value="Partial first attempt at Day 5." />
     <MESSAGE value="Start breaking Day 5 up into separate functions.&#10;&#10;* Added a function for get_opcode&#10;* Added docstrings&#10;* Started to add a function to get the data needed to use the opcode, but it won't work the way I've got it structured -- see note in code" />
     <MESSAGE value="Added some more functions:&#10;* Opcode processor: Actually does the processing of opcodes and data&#10;* Opcode computer: runs all the functions associated with opcode input&#10;&#10;Added TODOs to remind me what I thought I was doing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some more functions:&#10;* Opcode processor: Actually does the processing of opcodes and data&#10;* Opcode computer: runs all the functions associated with opcode input&#10;&#10;Added TODOs to remind me what I thought I was doing." />
+    <MESSAGE value="Updated get_data with actual code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated get_data with actual code." />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
@@ -275,10 +283,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="466" y="266" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.839@0.23.1440.839" timestamp="1575547097646" />
-    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1576178575640">
+    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1576178600014">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
-    <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.840@0.23.1440.840" timestamp="1576178575640" />
+    <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.840@0.23.1440.840" timestamp="1576178600014" />
     <state x="122" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1576027255863" />
     <state x="198" y="123" width="1053" height="599" key="DiffContextDialog" timestamp="1576020329433">
       <screen x="0" y="23" width="1440" height="839" />

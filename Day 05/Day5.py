@@ -12,6 +12,9 @@ nums = data.split(",")
 # Convert each item into a integer/list
 nums = list(map(int, nums))
 
+# A variable to hold the index that we're working on so we can increment it later
+current_index = 0
+
 def opcode_computer(input_list):
     """
     The code that actually makes up the opcode computer.
@@ -32,8 +35,7 @@ def opcode_computer(input_list):
             * Increments the index to the next opcode value
             * Breaks and returns if it finds a "stop" code (opcode 99)
     """
-    # A variable to hold the index that we're working on so we can increment it later
-    current_index = 0
+
 
     # Returns the opcode
     opcode = get_opcodes(input_list[current_index])
@@ -41,7 +43,7 @@ def opcode_computer(input_list):
     # Returns the 3 parameters (1 and 2 will be data, 3 will be the storage location of the data)
     data = get_data(opcode, current_index, input_list)
 
-    processed = opcode_processor(opcode, data, input_index, input_list)
+    processed = opcode_processor(opcode, data, current_index, input_list)
 
     # TODO: Figure out what the return needs to be
 
