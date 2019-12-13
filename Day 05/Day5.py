@@ -163,7 +163,7 @@ def opcode_computer(input_list):
             * Breaks and returns if it finds a "stop" code (opcode 99)
     """
 
-
+    #TODO: Fix this iteration loop -- you can't have a current_index that's within the number of parameters it needs from the end of the list
     for current_index in range(0, len(input_list)):
         # Returns the opcode
         opcode = get_opcodes(input_list[current_index])
