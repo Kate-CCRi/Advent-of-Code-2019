@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
+    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="Start breaking the code out into separate files.&#10;Add the start of some unit testing to make sure each little bit is outputting what I think it should be.">
+      <change afterPath="$PROJECT_DIR$/Day 05/get_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day 05/get_opcodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day 05/test_get_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day 05/test_get_opcodes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day 05/Day5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/Day5.py" afterDir="false" />
     </list>
@@ -14,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -206,7 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576269335387</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Needs to have the main iteration loop re-written.">
+      <created>1576272286771</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1576272286771</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added a TODO to point out where it needs work.">
+      <created>1576272331648</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1576272331648</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +272,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added the original problem (day 1 and day 2) and the test and full input files" />
     <MESSAGE value="Added a working version of Day 1.1 and the skeleton for Day 1.2" />
@@ -275,7 +296,10 @@
     <MESSAGE value="Updated get_data with actual code." />
     <MESSAGE value="More processes" />
     <MESSAGE value="Update to the opcode processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to the opcode processor" />
+    <MESSAGE value="Needs to have the main iteration loop re-written." />
+    <MESSAGE value="Added a TODO to point out where it needs work." />
+    <MESSAGE value="Start breaking the code out into separate files.&#10;Add the start of some unit testing to make sure each little bit is outputting what I think it should be." />
+    <option name="LAST_COMMIT_MESSAGE" value="Start breaking the code out into separate files.&#10;Add the start of some unit testing to make sure each little bit is outputting what I think it should be." />
   </component>
   <component name="WindowStateProjectService">
     <state x="573" y="124" key="#Inspections" timestamp="1575419610664">
@@ -299,9 +323,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="466" y="266" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.839@0.23.1440.839" timestamp="1575547097646" />
-    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1576272331488">
-      <screen x="0" y="23" width="1440" height="840" />
+    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1576874563008">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
+    <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.838@0.23.1440.838" timestamp="1576874563008" />
     <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.840@0.23.1440.840" timestamp="1576272331488" />
     <state x="122" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1576027255863" />
     <state x="198" y="123" width="1053" height="599" key="DiffContextDialog" timestamp="1576020329433">
@@ -317,9 +342,10 @@
     </state>
     <state x="443" y="97" key="SettingsEditor/-227.-1057.1920.1057/0.23.1440.840@0.23.1440.840" timestamp="1576271312347" />
     <state x="443" y="97" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1575505235891" />
-    <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1576020281445">
-      <screen x="0" y="23" width="1440" height="839" />
+    <state x="397" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1576854606742">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
+    <state x="397" y="275" key="com.intellij.ide.util.TipDialog/-227.-1057.1920.1057/0.23.1440.838@0.23.1440.838" timestamp="1576854606742" />
     <state x="397" y="275" key="com.intellij.ide.util.TipDialog/0.23.1440.839@0.23.1440.839" timestamp="1576020281445" />
     <state x="756" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576020178128">
       <screen x="0" y="23" width="1440" height="839" />
