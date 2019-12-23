@@ -31,10 +31,20 @@ def get_opcodes(input):
         # If all five positions are specified, reverse it (to put the opcode first) and return it
         if len(item) == 5:
             item.reverse()
-            return item
+            opcode = int(str(item[0]) + str(item[1]))
+            mode1 = item[2]
+            mode2 = item[3]
+            mode3 = item [4]
+            return [opcode, mode1, mode2, mode3]
         # Otherwise, put in zeroes until it does specify all five positions, then reverse and return it
         else:
-            item.reverse()
             for i in range(5-len(item)):
                 item.insert(0, 0)
-            return item
+            item.reverse()
+            opcode = int(str(item[1]) + str(item[0]))
+            mode1 = item[2]
+            mode2 = item[3]
+            mode3 = item[4]
+            return [opcode, mode1, mode2, mode3]
+
+print(get_opcodes(1002))

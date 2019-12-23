@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="Start breaking the code out into separate files.&#10;Add the start of some unit testing to make sure each little bit is outputting what I think it should be.">
-      <change afterPath="$PROJECT_DIR$/Day 05/get_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 05/get_opcodes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 05/test_get_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 05/test_get_opcodes.py" afterDir="false" />
+    <list default="true" id="62ca9218-5ef9-49b6-85fd-bc3eb89925f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day 05/Day5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/Day5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 05/get_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/get_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 05/get_opcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/get_opcodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 05/test_get_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/test_get_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 05/test_get_opcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 05/test_get_opcodes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576272331648</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Start breaking the code out into separate files.&#10;Add the start of some unit testing to make sure each little bit is outputting what I think it should be.">
+      <created>1576874634550</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1576874634550</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,10 +330,10 @@
       <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="466" y="266" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.839@0.23.1440.839" timestamp="1575547097646" />
-    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1576874563008">
+    <state x="122" y="23" key="CommitChangelistDialog2" timestamp="1577128433737">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.838@0.23.1440.838" timestamp="1576874563008" />
+    <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.838@0.23.1440.838" timestamp="1577128433737" />
     <state x="122" y="23" key="CommitChangelistDialog2/-227.-1057.1920.1057/0.23.1440.840@0.23.1440.840" timestamp="1576272331488" />
     <state x="122" y="61" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1576027255863" />
     <state x="198" y="123" width="1053" height="599" key="DiffContextDialog" timestamp="1576020329433">

@@ -15,9 +15,10 @@ class TestGetOpcodes(unittest.TestCase):
     def test_get_opcodes_multiple(self):
         self.assertEqual(get_opcodes(12345), [5, 4, 3, 2, 1], "A list of five integers in it is not being "
                                                                         "processed correctly.")
+
     # Test the " 1 < x < 5 digit case with zeros filled in for the missing digits" case
     def test_get_opcodes_zero_fill(self):
-        self.assertEqual(get_opcodes(1002), [0, 2, 0, 0, 1], "A list that requires zero-filling is not being "
+        self.assertEqual(get_opcodes(1002), [2, 0, 1, 0], "A list that requires zero-filling is not being "
                                                                "processed correctly.")
 
 if __name__ == '__main__':
